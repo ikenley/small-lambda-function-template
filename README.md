@@ -33,3 +33,13 @@ cd s3-notify-function
 npm i
 npm run build
 ```
+
+--
+
+## Terraform Deployment
+
+```
+cd terraform/env/dev/s3_notify_function
+terraform init
+terraform apply
+```

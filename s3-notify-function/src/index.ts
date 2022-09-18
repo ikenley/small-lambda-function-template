@@ -1,7 +1,12 @@
 import { S3Event } from 'aws-lambda';
 
 export const handler = async (event: S3Event) => {
-  console.log('event', event);
+  if (event.Records.length > 0) {
+    console.log(
+      'event.Records[0].s3',
+      JSON.stringify(event.Records[0].s3, null, 2),
+    );
+  }
 
   const response = {
     statusCode: 200,
