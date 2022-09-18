@@ -2,7 +2,7 @@
   "name": "small-lambda-function-template",
   "version": "1.0.0",
   "description": "Template for small lambda functions",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "type": "module",
   "scripts": {
     "start": "node build/src/main.js",
