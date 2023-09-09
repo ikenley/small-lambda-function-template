@@ -12,6 +12,7 @@ locals {
     Terraform   = true
     Environment = var.env
     is_prod     = var.is_prod
+    repo        = "https://github.com/ikenley/small-lambda-function-template"
   })
 }
 
@@ -26,7 +27,7 @@ module "lambda" {
   function_name = local.prefix
   description   = "Send SNS notifications on S3 events"
   handler       = "index.handler"
-  runtime       = "nodejs14.x"
+  runtime       = "nodejs18.x"
 
   source_path = {
     path             = "${path.module}/../../../s3-notify-function/dist/src"
